@@ -1,0 +1,888 @@
+/* Common CSS  */
+body {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/background.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+}
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+.header {
+  padding: 15px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  text-align: center;
+}
+.header .header_inner {
+  display: flex;
+  justify-content: center;
+}
+.header .logo {
+  width: 150px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+/* Fieldset style for input grouping */
+.image-editor .badge-form-fieldset {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 1.2rem 1rem 1rem 1rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 8px #eee;
+  border: 1px solid #eaeaea;
+}
+.image-editor .badge-form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.image-editor .badge-form-input-error {
+  border-color: #e44d9e !important;
+  background: #fff0f6;
+}
+.image-editor .badge-form-error {
+  color: #e44d9e;
+  font-size: 0.92rem;
+  margin-top: 0.2rem;
+  font-weight: 500;
+}
+
+/* Wide drag & drop area for image */
+.image-editor .badge-form-uploadImage-wide {
+  width: 100%;
+  min-height: 120px;
+  background: #f7f7f7;
+  border: 2px dashed #b2539b;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto 0.5rem auto;
+  transition: border-color 0.3s;
+}
+.image-editor .badge-form-uploadImage-wide.drag-over {
+  border-color: #e44d9e;
+  background: #fbe6f7;
+}
+/* Small drag & drop area for badge form */
+.image-editor .badge-form-image-group {
+  margin-bottom: 40px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-editor .badge-form-uploadImage {
+  width: -webkit-fill-available;
+  height: 100%;
+  padding: 0 20px;
+  min-height: 150px;
+  background: rgb(248 221 255 / 65%);
+  border: 4px dashed #b2539b;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  transition: 0.4s all;
+}
+.image-editor .badge-form-uploadImage.drag-over {
+  border-color: #22021d;
+  background: #fbe6f7;
+}
+.image-editor .badge-form-upload_content {
+  text-align: center;
+}
+.image-editor .badge-form-upload-text {
+  font-size: 18px;
+  color: #b2539b;
+  font-weight: bold;
+  margin: 0.3rem;
+}
+.image-editor .badge-form-image-group span {
+  margin: 5px 0;
+  display: block;
+  font-size: 14px;
+}
+.image-editor .badge-form-upload-label i {
+  margin-right: 6px;
+}
+/* Badge Preview Card Actions */
+.image-editor .badge-preview-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.image-editor .badge-preview-back,
+.image-editor .badge-preview-next {
+  background: linear-gradient(90deg, #a32383, #22021d);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.image-editor .badge-preview-back i,
+.image-editor .badge-preview-next i {
+  font-size: 1.2rem;
+}
+.image-editor .badge-preview-back:hover,
+.image-editor .badge-preview-next:hover {
+  background: linear-gradient(90deg, #22021d, #a32383);
+}
+
+/* Badge Form Fields */
+.image-editor .badge-form-fields {
+  max-width: 550px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+}
+.image-editor .badge-form-fields:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(../images/glass-texture.jpg), linear-gradient(black, black);
+  background-blend-mode: hard-light;
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9;
+  opacity: 0.3;
+}
+
+
+.image-editor .badge-form-title {
+  color: white;
+  margin-top: 0;
+  font-weight: normal;
+  text-align: center;
+}
+.image-editor .badge-form-group {
+  margin-bottom: 1rem;
+}
+.image-editor .badge-form-input {
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid #bebebe;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(248 221 255 / 30%);
+  outline: none;
+}
+.image-editor .badge-form-input:focus {
+  border-color: white;
+  box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.2);
+}
+.image-editor .badge-form-input::placeholder {
+  color: lightgray;
+}
+.image-editor .badge-form-error {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2px 10px;
+  animation: 0.6s shakeError ease;
+}
+@keyframes shakeError {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-3px);
+  }
+  40% {
+    transform: translateX(3px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.image-editor .badge-form-image-preview {
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+.image-editor .badge-form-remove {
+  background: linear-gradient(90deg, #a32383, #22021d);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 8px 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.image-editor .badge-form-actions {
+  text-align: end;
+  margin-top: 1.5rem;
+}
+.image-editor .badge-form-next {
+  background: linear-gradient(90deg, #a32383, #22021d);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Badge Preview Card */
+.image-editor .badge-preview {
+  max-width: 500px;
+  margin: 30px auto;
+  padding-bottom: 50px;
+}
+.image-editor .badge-preview-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.image-editor .badge-preview-logo {
+  width: 150px;
+}
+.image-editor .badge-preview-org {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.image-editor .badge-preview-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.image-editor .badge-preview-image-box {
+  max-width: 250px;
+  background: #7e7e7e;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-editor .badge-preview-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  object-fit: contain;
+}
+.image-editor .badge-preview-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+}
+.image-editor .badge-preview-name {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+.image-editor .badge-preview-attending {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.image-editor .badge-preview-attending-btn {
+  background: linear-gradient(90deg, #a32383, #b2539b);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.image-editor .badge-unbound-logo img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+.image-editor .badge-preview-date{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 10px 5px 10px;
+    padding: 15px;
+    border: 2px solid rgba(255,255,255,0.5); 
+    border-radius: 8px;
+}
+.image-editor .badge-preview .badge-preview-attending .badge-type-btn {
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(90deg ,transparent, #a32383 40% 60%,transparent);
+    padding: 15px 0;
+}
+
+/* Upload CSS  */
+.upload-section,
+.edit-section,
+.select-section {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 30px 0;
+}
+
+.image-editor .uploadImage {
+  position: relative;
+  width: 90%;
+  height: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 4px dashed grey;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.image-editor .uploadImage.drag-over {
+  border-color: #b2539b;
+  background-color: rgb(239 188 255 / 80%);
+}
+
+.image-editor .uploadImage .upload_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.image-editor .custom-file-input {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #a32383, #22021d);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.image-editor .custom-file-input:hover {
+  background: linear-gradient(90deg, #22021d, #a32383);
+}
+
+#upload {
+  display: none;
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.image-preview.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.image-preview.hide {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.remove-button,
+.edit-button {
+  position: absolute;
+  top: 20px;
+  font-size: 35px;
+  color: rgb(255, 102, 0);
+  background-color: transparent;
+  text-shadow: 0 0 10px white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.remove-button:hover {
+  color: rgb(216, 75, 4);
+}
+.remove-button {
+  left: 20px;
+}
+.edit-button {
+  color: #2eb8ad;
+  right: 20px;
+}
+.edit-button:hover {
+  color: #0c8a80;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #b2539b;
+  border-radius: 50%;
+  border-top: 4px solid #22021d;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.edit-section-inner {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 20px 20px 80px 20px;
+  display: flex;
+  align-items: center;
+}
+.edit-section-inner:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(../images/glass-texture.jpg), linear-gradient(black, black);
+  background-blend-mode: hard-light;
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9;
+  opacity: 0.3;
+}
+
+.edit-image-section {
+  position: relative;
+  width: 70%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cropper-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.edit-options {
+  width: 30%;
+  margin: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: start;
+}
+
+.edit-options .option_inner {
+  width: 100%;
+  margin: 15px 0;
+}
+.edit-options label {
+  color: white;
+  text-shadow: 0 0 20px black;
+  margin: 0 10px 0 0;
+  width: 95px !important;
+  display: inline-block;
+  text-align: left;
+  font-weight: bold;
+}
+
+.edit-options input[type="range"] {
+  width: 200px;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border: 2px solid #22021d;
+  border-radius: 16px;
+}
+
+/* Track: webkit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 14px;
+  background: #22021d;
+  border-radius: 16px;
+}
+
+/* Track: Mozilla Firefox */
+input[type="range"]::-moz-range-track {
+  height: 14px;
+  background: #22021d;
+  border-radius: 16px;
+}
+
+/* Thumb: webkit */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 14px;
+  width: 14px;
+  background-color: #22021d;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  box-shadow: -407px 0 0 400px #e44d9e;
+}
+
+/* Thumb: Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  background-color: #22021d;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  box-shadow: -407px 0 0 400px #e44d9e;
+}
+
+.back-button,
+.next-button,
+.download-button {
+  position: absolute;
+  bottom: 15px;
+  background: linear-gradient(90deg, #a32383, #22021d);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.back-button {
+  left: 15px;
+}
+.next-button {
+  right: 15px;
+}
+.download-button {
+  right: 15px;
+}
+.back-button:hover,
+.next-button:hover,
+.download-button:hover {
+  background: linear-gradient(90deg, #22021d, #a32383);
+}
+
+.full-image-preview {
+  border-radius: 50%;
+}
+.edit-image-section img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+.reset-button,
+.preview-button {
+  position: absolute;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+.reset-button {
+  top: 20px;
+}
+.preview-button {
+  bottom: 20px;
+}
+.reset-button:hover,
+.preview-button:hover {
+  color: #ccc;
+}
+
+.cropped-image-section {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.cropped-image-section img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.final-preview-page {
+  position: relative;
+  max-width: 500px;
+  height: auto;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 20px 20px 80px 20px;
+  overflow: hidden;
+}
+.final-preview-page:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(../images/glass-texture.jpg), linear-gradient(black, black);
+  background-blend-mode: hard-light;
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9;
+  opacity: 0.3;
+}
+.final-preview-page .final-inner-image {
+  width: 90%;
+  position: relative;
+  margin: 10px auto;
+}
+
+.final-preview-page .final-inner-image .cropped-image {
+  width: 100%;
+  border-radius: 5px;
+}
+.final-preview-page .badge-type-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0 10px 0;
+}
+.final-preview-page .badge-type-buttons .badge-type-btn {
+  font-size: 1rem;
+  padding: 10px 15px;
+  border: 1px solid #22021d;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: 0.4s all;
+  box-shadow: 0 5px 0 0 #22021d;
+  transition: 0.2s all;
+}
+.final-preview-page .badge-type-buttons .badge-type-btn:active {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+.final-preview-page .badge-type-buttons .badge-type-btn.selected {
+  filter: brightness(0.8) contrast(1.8);
+}
+
+.download-split-btn {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.download-split-btn .badge-preview-next {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.download-split-btn .dropdown-toggle {
+  background: #a32383;
+  color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.download-split-btn .dropdown-toggle:hover {
+  background: #22021d;
+}
+
+.download-split-btn .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #22021d;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  min-width: 150px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.download-split-btn .dropdown-menu div {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+}
+
+.download-split-btn .dropdown-menu div:hover {
+  background: #a32383;
+}
+
+/* Media-Query */
+
+@media (max-width: 1024px) {
+  .edit-section-inner {
+    height: max-content;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .edit-image-section,
+  .edit-options {
+    width: 100%;
+  }
+  .edit-options .option_inner {
+    width: 50%;
+  }
+  .final-preview-page {
+    flex-wrap: wrap;
+    height: max-content;
+  }
+  .final-preview-page .final-inner-image,
+  .final-preview-page .image-sticker {
+    width: 100%;
+  }
+  .final-preview-page .image-sticker {
+    height: 300px;
+  }
+  .final-inner-image .cropped-image,
+  .final-preview-page .final-inner-image .custom-shape {
+    width: 50%;
+  }
+  .final-preview-page .image-sticker .image_position {
+    width: 100%;
+  }
+  .final-preview-page .image-sticker button {
+    width: 35%;
+  }
+}
+@media (max-width: 768px) {
+  .edit-options .option_inner {
+    width: 100%;
+    text-align: center;
+  }
+  .final-preview-page .image-sticker button {
+    padding: 10px;
+    margin: 10px;
+    width: 40%;
+  }
+}
+@media (max-width: 575px) {
+  .edit-image-section {
+    height: 400px;
+    margin-top: 50px;
+  }
+  .reset-button,
+  .preview-button {
+    top: 10px;
+    font-size: 25px;
+    right: auto;
+  }
+  .reset-button {
+    left: 10px;
+  }
+  .preview-button {
+    right: 10px;
+    bottom: auto;
+  }
+  .edit-options .option_inner {
+    margin: 8px 0;
+    text-align: start;
+  }
+  .final-inner-image .cropped-image,
+  .final-preview-page .final-inner-image .custom-shape {
+    width: 100%;
+  }
+  .final-preview-page .image-sticker {
+    height: 250px;
+  }
+  .final-preview-page .image-sticker .image_position {
+    width: 75%;
+  }
+  .final-preview-page .image-sticker h2 {
+    font-size: small;
+  }
+}
