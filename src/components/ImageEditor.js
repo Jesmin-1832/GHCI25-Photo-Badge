@@ -294,7 +294,7 @@ function ImageEditor() {
 
   return (
     <div>
-      <div className="header">
+      <div className="header" style={{ display: step === 3 ? 'none' : 'block' }}>
         <div className="container">
           <div className="header_inner">
             <img
@@ -560,7 +560,7 @@ function ImageEditor() {
                 id="badge-preview-download"
                 className="badge-preview-download"
                 style={{
-                  maxWidth: "500px",
+                  maxWidth: "550px",
                   margin: "0 auto",
                   background: `url(${backgroundImage}), linear-gradient(#22021d)`,
                   backgroundBlendMode: "normal",
@@ -622,6 +622,10 @@ function ImageEditor() {
                   </div>
                   <div className="badge-preview-date">
                     December 2-4, 2025 | KTPO, Bengaluru
+                  </div>
+                  <div className="badge-preview-qr">
+                    <img src={require("../images/qr-code-b&w.png")}/>
+                    <p>Scan the QR code or know more at ghci.anitabindia.org</p>
                   </div>
                 </div>
               </div>

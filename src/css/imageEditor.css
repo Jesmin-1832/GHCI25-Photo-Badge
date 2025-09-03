@@ -1,7 +1,6 @@
 /* Common CSS  */
 body {
   width: 100%;
-  height: 100vh;
   background: url(../images/background.jpg);
   background-size: cover;
   background-position: top center;
@@ -10,6 +9,7 @@ body {
   font-family: Arial, sans-serif;
 }
 .container {
+  padding: 0 15px;
   max-width: 80vw;
   margin: 0 auto;
 }
@@ -177,7 +177,6 @@ body {
   opacity: 0.3;
 }
 
-
 .image-editor .badge-form-title {
   color: white;
   margin-top: 0;
@@ -274,7 +273,7 @@ body {
 
 /* Badge Preview Card */
 .image-editor .badge-preview {
-  max-width: 500px;
+  max-width: 550px;
   margin: 30px auto;
   padding-bottom: 50px;
 }
@@ -344,22 +343,41 @@ body {
 }
 .image-editor .badge-unbound-logo img {
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
   height: auto;
 }
-.image-editor .badge-preview-date{
-    font-size: 20px;
-    font-weight: bold;
-    margin: 20px 10px 5px 10px;
-    padding: 15px;
-    border: 2px solid rgba(255,255,255,0.5); 
-    border-radius: 8px;
+.image-editor .badge-preview-date {
+  width: max-content;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px auto;
+  padding: 15px 25px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+.image-editor .badge-preview-qr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 20px;
+}
+.image-editor .badge-preview-qr img {
+  max-width: 130px;
+  border-radius: 5px;
+}
+.image-editor .badge-preview-qr p {
+  font-size: 20px;
+  text-align: start;
+  width: max-content;
 }
 .image-editor .badge-preview .badge-preview-attending .badge-type-btn {
-    font-size: 25px;
-    font-weight: bold;
-    background: linear-gradient(90deg ,transparent, #a32383 40% 60%,transparent);
-    padding: 15px 0;
+  font-size: 25px;
+  font-weight: bold;
+  background: linear-gradient(90deg, transparent, #a32383 40% 60%, transparent);
+  padding: 15px 0;
 }
 
 /* Upload CSS  */
@@ -840,6 +858,9 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 @media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
   .edit-options .option_inner {
     width: 100%;
     text-align: center;
@@ -848,6 +869,11 @@ input[type="range"]::-moz-range-thumb {
     padding: 10px;
     margin: 10px;
     width: 40%;
+  }
+  .image-editor .badge-preview-date {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
   }
 }
 @media (max-width: 575px) {
@@ -884,5 +910,24 @@ input[type="range"]::-moz-range-thumb {
   }
   .final-preview-page .image-sticker h2 {
     font-size: small;
+  }
+  .image-editor .badge-preview-logo{
+    width: 120px;
+  }
+  .image-editor .badge-preview-name{
+    font-size: 26px;
+  }
+  .image-editor .badge-preview .badge-preview-attending .badge-type-btn{
+    font-size: 25px;
+    padding: 10px 0;
+  }
+  .image-editor .badge-unbound-logo img{
+    max-width: 250px;
+  }
+  .image-editor .badge-preview-qr img{
+    max-width: 100px;
+  }
+  .image-editor .badge-preview-qr p{
+    font-size: 16px;
   }
 }
